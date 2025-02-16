@@ -13,7 +13,7 @@ function totalShoppingCost(products) {
     let totalCost=0;
     for (let product of products) {
 
-        totalCost += product.price;
+        totalCost += product.price ;
 
     }
 
