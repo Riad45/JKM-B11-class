@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <section>
+        <h1 id="heading">Hello there lets start the dom</h1>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius cupiditate ipsa necessitatibus iusto cum harum dolorum omnis, delectus saepe eos?</p>
+        <button class="primary-btn" onclick="changeText()">Click Me</button>
+    </section>
+
+    <script>
+        function changeText(){
+
+            const heading = document.getElementById("heading");
+            heading.innerText = "You are Learning";
+            heading.style.color= "lightblue";
+
+            const description = document.getElementsByClassName("description");
+            description[0].innerText= " yessssssssss....... I can change that my boy .........";
+            description[0].style.backgroundColor = "lightblue";
+
+            const primaryBtn = document.querySelector(".primary-btn");
+            primaryBtn.style.padding ="15px";
+            primaryBtn.style.borderRadius= "8px";
+            primaryBtn.style.border = "none";
+            primaryBtn.style.backgroundColor= "lightblue"
+
+        }
+    </script>
+</body>
+</html>

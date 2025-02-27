@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="heading">Headinggggggggg</h1>
+        <ul class="listContainer">
+            <li class="list">Item-1</li>
+            <li class="list">Item-2</li>
+            <li class="list">Item-3</li>
+            <li class="list">Item-4</li>
+            <li class="list">Item-5</li>
+        </ul>
+    </div>
+
+    <script>
+
+        // Select the list container (ul element)
+        const listContainer = document.querySelector(".listContainer");
+
+        // Select all list items (li elements) inside the list container
+        const list = document.querySelectorAll(".list");
+
+        // Creating new list items (li elements) to add to the list
+        const newList = document.createElement("li");
+        newList.innerText = "Created with Js"; // Adding text content to the new list item
+
+        const listItem1 = document.createElement("li");
+        listItem1.innerText = "Item from appendChild"; // Text for item created using appendChild
+
+        const listItem2 = document.createElement("li");
+        listItem2.innerText = "Item from append"; // Text for item created using append
+
+        // Adding a new item using appendChild (works fine)
+        listContainer.appendChild(listItem1);
+
+        // Adding a new item using append (works fine)
+        listContainer.append(listItem2, " - Extra text added with append");
+
+        // Inserting a new list item before the first element in the list using insertBefore
+        listContainer.insertBefore(newList, list[0]); // Insert 'newList' before the first element in the list
+
+        // Removing an item using removeChild
+        listContainer.removeChild(listItem2); // Removes 'Item from append'
+
+        // Replacing an existing list item with a new one using replaceChild
+        const newItemForReplace = document.createElement("li");
+        newItemForReplace.innerText = "This is a replacement item!"; // Text for the new replacement item
+        
+        // Replacing the second list item (Item-2) with the new item
+        listContainer.replaceChild(newItemForReplace, list[1]);
+
+    </script>
+</body>
+
+</html>
