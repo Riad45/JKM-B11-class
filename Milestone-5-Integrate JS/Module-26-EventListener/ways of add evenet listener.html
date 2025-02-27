@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="event-listener">
+        <h1 class="heading">This is the heading</h1>
+
+        <input type="text" name="" id=""><br><br>
+
+        <button id="btn-blue">Make it Blue</button><br><br>
+        <button id="btn-yellow">Make it Yellow</button><br><br>
+        <button id="btn-light-blue">Make it Light Blue</button><br><br>
+        <button id="btn-orange">Make it Orange</button><br><br>
+        <button id="btn-gray">Make it Gray</button><br><br>
+    </div>
+
+    <script>
+
+
+
+        const blueBtn = document.getElementById("btn-blue");
+        blueBtn.onclick = function blueBg(){
+            document.body.style.backgroundColor="blue";
+        }
+
+
+        // best way... addEventListener
+
+        function yellowBg(){
+                document.body.style.backgroundColor="yellow";
+            }
+
+        const yellowBtn = document.getElementById("btn-yellow")
+            .addEventListener("click",yellowBg);
+            
+           
+
+        const lightBlueBtn = document.getElementById("btn-light-blue")
+        .addEventListener("click", function (){
+            document.body.style.backgroundColor="lightblue";
+        })
+
+
+        const OrangeBg = document.getElementById("btn-orange");
+
+        OrangeBg.addEventListener("mouseover",function(){
+
+            document.body.style.backgroundColor="orange";
+            OrangeBg.style.scale="1.1";
+        })
+        OrangeBg.addEventListener("mouseout",function(){
+
+            document.body.style.backgroundColor="";
+            OrangeBg.style.scale="1";
+        })
+
+
+
+
+
+    </script>
+</body>
+</html>
