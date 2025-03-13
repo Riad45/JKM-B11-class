@@ -5,7 +5,7 @@ class Person {
         this.age = age;
     }
 
-    showInfo(){
+    showInfo() {
         console.log(`Name: ${this.name}\n Age:${this.age}`);
     }
 
@@ -22,7 +22,7 @@ class Student extends Person {
     }
     // override..
 
-    showInfo(){
+    showInfo() {
         console.log(`Name: ${this.name}\n Age:${this.age} ID: ${this.studentID}`);
     }
 
@@ -35,26 +35,34 @@ class Student extends Person {
 class Teacher extends Person {
     constructor(name, age, teachingSub) {
         super(name, age);
-        this.teachingSub=teachingSub;
+        this.teachingSub = teachingSub;
 
     }
 
-    showInfo(){
+    showInfo() {
         super.showInfo();
     }
 
     // @override
 
-    duty(){
+    duty() {
         console.log(`Teacher ${this.name} is studying ${this.teachingSub}`);
     }
 
-    }
+}
 
-    const student = new Student("Riad", 25,911);
-    student.showInfo();
-    student.duty();
+const student = new Student("Riad", 25, 911);
+student.showInfo();
+student.duty();
 
-    const techer = new Teacher("Akkash Mia", 33,"OOP");
-    techer.showInfo();
-    techer.duty();
+const techer = new Teacher("Akkash Mia", 33, "OOP");
+techer.showInfo();
+techer.duty();
+
+ console.log("\n\n\n");
+
+ function min(nums){
+    return Math.min(nums);
+ }
+
+ console.log(min([1,2,3]));
