@@ -9,11 +9,11 @@ function App() {
 
 
  const mobiles = [
-  { name: "Mi 11 Lite",     brand: "Xiaomi",  color: "Blue",    price: 3500 },
-  { name: "Galaxy A55",     brand: "Samsung", color: "Awesome Black", price: 4200 },
-  { name: "iPhone 14",      brand: "Apple",   color: "Midnight", price: 11800 },
-  { name: "Pixel 8a",       brand: "Google",  color: "Porcelain", price: 5200 },
-  { name: "Redmi Note 13",  brand: "Xiaomi",  color: "Mint Green", price: 3100 }
+  {id : 1 , name: "Mi 11 Lite",     brand: "Xiaomi",  color: "Blue",    price: 3500 },
+  {id : 2, name: "Galaxy A55",     brand: "Samsung", color: "Awesome Black", price: 4200 },
+  {id : 3 , name: "iPhone 14",      brand: "Apple",   color: "Midnight", price: 11800 },
+  {id : 4, name: "Pixel 8a",       brand: "Google",  color: "Porcelain", price: 5200 },
+  {id : 5 , name: "Redmi Note 13",  brand: "Xiaomi",  color: "Mint Green", price: 3100 }
 ];
 
 
@@ -33,7 +33,7 @@ function App() {
        <BuyFood name='Singara' price ='20'></BuyFood> */}
 
        {
-        mobiles.map(phone => <Mobile phone={phone}></Mobile>)
+        mobiles.map(phone => <Mobile key={phone.id} phone={phone}></Mobile>)
        }
 
 
