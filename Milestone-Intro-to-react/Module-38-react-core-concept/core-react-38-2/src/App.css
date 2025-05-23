@@ -44,6 +44,7 @@
 
 .priceStyle{
   font-weight: 600;
+  margin-bottom: 10px;
   color: rgb(246, 214, 4);
   font-size: x-large;
   border: 1px solid;

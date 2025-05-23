@@ -1,6 +1,8 @@
 
 import './App.css'
 
+import BuyFood  from './buyFood';
+
 function App() {
 
 
@@ -9,7 +11,18 @@ function App() {
 
     <h1>React core Concept</h1>
 
-      <Pet></Pet>
+      {/* <Pet></Pet>
+      <FoodShop name='Forid pet shop' location='Dhaka' purchaseAmt='950'></FoodShop>
+      <FoodShop name='Khulna pet shop' location='Khulna'></FoodShop>
+      <FoodShop name='hobby pet' location='Borishal' purchaseAmt='1200'></FoodShop>
+       */}
+
+       <BuyFood name='fried chicken' price ='80'></BuyFood>
+       <BuyFood name='Burger' price ='160'></BuyFood>
+       <BuyFood name='Singara' price ='20'></BuyFood>
+
+
+
       
       
     </>
@@ -76,6 +89,20 @@ function Food( props){
       <li>Quntity:{props.quntity} </li>
       <li style={expireDateStyle}> Expire Date : {props.expireDate} </li>
     </ul>
+
+    </div>
+  )
+}
+
+function FoodShop ({name, location,purchaseAmt='kene nai'}){
+  return(
+    <div className='priceStyle'>
+
+      <h3>Food Shop Details</h3>
+
+      <p>Name: {name} </p>
+      <p>Location: {location}</p>
+      <p>purchase ammount : {purchaseAmt}</p>
 
     </div>
   )
