@@ -3,14 +3,14 @@ export default function BuyFood({ name, price }) {
 
   if (balance > price) {
     return (
-      <p>
+      <p className="priceStyle">
         Enjoy your {name} and your balance is {(balance = balance - price)}
       </p>
     );
   }
 
   return (
-    <p>
+    <p className="priceStyle">
       Sorry can not buy {name} you need {price - balance} taka more{" "}
     </p>
   );

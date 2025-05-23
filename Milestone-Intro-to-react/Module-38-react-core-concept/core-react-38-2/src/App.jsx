@@ -3,7 +3,18 @@ import './App.css'
 
 import BuyFood  from './buyFood';
 
+import Mobile from './Mobile';
+
 function App() {
+
+
+ const mobiles = [
+  { name: "Mi 11 Lite",     brand: "Xiaomi",  color: "Blue",    price: 3500 },
+  { name: "Galaxy A55",     brand: "Samsung", color: "Awesome Black", price: 4200 },
+  { name: "iPhone 14",      brand: "Apple",   color: "Midnight", price: 11800 },
+  { name: "Pixel 8a",       brand: "Google",  color: "Porcelain", price: 5200 },
+  { name: "Redmi Note 13",  brand: "Xiaomi",  color: "Mint Green", price: 3100 }
+];
 
 
   return (
@@ -17,9 +28,16 @@ function App() {
       <FoodShop name='hobby pet' location='Borishal' purchaseAmt='1200'></FoodShop>
        */}
 
-       <BuyFood name='fried chicken' price ='80'></BuyFood>
+       {/* <BuyFood name='fried chicken' price ='80'></BuyFood>
        <BuyFood name='Burger' price ='160'></BuyFood>
-       <BuyFood name='Singara' price ='20'></BuyFood>
+       <BuyFood name='Singara' price ='20'></BuyFood> */}
+
+       {
+        mobiles.map(phone => <Mobile phone={phone}></Mobile>)
+       }
+
+
+
 
 
 
