@@ -1,6 +1,6 @@
 
 import './App.css'
-
+import Counter from './Counter';
 function App() {
 
   const handleBtn1 = ()=>{
@@ -8,7 +8,7 @@ function App() {
   }
 
   const add5=(num)=>{
-    alert(num+5 );
+    alert(`the sum after adding 5 is: ${num+5}` );
   }
 
 
@@ -23,6 +23,9 @@ function App() {
       <p>When we need to pass a value to a function then we will set a anonymous function for onClick and inside that anonymous arrow function we will declare our desire function .. As in js if we give a function name with () it will automically called the function.. to avoid this we use the anonymous way </p>
 
       <button onClick={()=>add5(4)}>btn2</button>
+
+      <Counter></Counter>
+
    
     </>
   )
