@@ -3,22 +3,22 @@
 
 
 
-const arr = ["Mita", "Fita","Tita","Gita"];
+const arr = ["Mita", "Fita", "Tita", "Gita"];
 
-const [el1,el2,el3] = arr;
+const [el1, el2, el3] = arr;
 
 console.log(el3);
 
 // object destructuring 
 
-const person= {
-    name: "Rohim",
-    age: 26,
-    skills: ["html", "CSS","js","c++","java"],
-    profession: "web dev learner"
+const person = {
+  name: "Rohim",
+  age: 26,
+  skills: ["html", "CSS", "js", "c++", "java"],
+  profession: "web dev learner"
 }
 
-const {name,age,profession,skills} = person;
+const { name, age, profession, skills } = person;
 
 console.log(name);
 console.log(skills[3]);
@@ -34,14 +34,14 @@ console.log(value);
 // array method
 
 const mobile = [
-  { name: "Mi 11 Lite",     brand: "Xiaomi",  color: "Blue",    price: 3500 },
-  { name: "Galaxy A55",     brand: "Samsung", color: "Awesome Black", price: 4200 },
-  { name: "iPhone 14",      brand: "Apple",   color: "Midnight", price: 11800 },
-  { name: "Pixel 8a",       brand: "Google",  color: "Porcelain", price: 5200 },
-  { name: "Redmi Note 13",  brand: "Xiaomi",  color: "Mint Green", price: 3100 },
-  { name: "Realme 12 Pro",  brand: "Realme",  color: "Submarine Blue", price: 3600 },
+  { name: "Mi 11 Lite", brand: "Xiaomi", color: "Blue", price: 3500 },
+  { name: "Galaxy A55", brand: "Samsung", color: "Awesome Black", price: 4200 },
+  { name: "iPhone 14", brand: "Apple", color: "Midnight", price: 11800 },
+  { name: "Pixel 8a", brand: "Google", color: "Porcelain", price: 5200 },
+  { name: "Redmi Note 13", brand: "Xiaomi", color: "Mint Green", price: 3100 },
+  { name: "Realme 12 Pro", brand: "Realme", color: "Submarine Blue", price: 3600 },
   { name: "OnePlus Nord 3", brand: "OnePlus", color: "Tempest Gray", price: 4600 },
-  { name: "Poco X6 Pro",    brand: "Poco",    color: "Phantom Black", price: 3800 }
+  { name: "Poco X6 Pro", brand: "Poco", color: "Phantom Black", price: 3800 }
 ];
 
 
@@ -57,12 +57,12 @@ console.log(values);
 
 
 
-const brands = mobile.map(brand=> brand.brand
+const brands = mobile.map(brand => brand.brand
 )
 
 console.log(brands);
 
-const priceOver4000 = mobile.filter(p=> p.price>4000);
+const priceOver4000 = mobile.filter(p => p.price > 4000);
 console.log(priceOver4000);
 
 
@@ -78,4 +78,31 @@ console.log(stringifyToReal);
 
 const num = 23;
 
-(num>20 && num<30) ? console.log("true") : console.log("false");
+(num > 20 && num < 30) ? console.log("true") : console.log("false");
+
+
+
+
+//Set value Local storage 
+
+
+
+const addToLocalStorage = () => {
+  const lKey = document.getElementById("key").value;
+
+  const lName = document.getElementById("value").value;
+
+  // localStorage.setItem("lkey",lName);
+
+  const obj= {lKey,lName};
+
+  localStorage.setItem(lKey,JSON.stringify(obj));
+
+
+
+}
+
+const item= localStorage.getItem("124");
+console.log(JSON.parse(item));
+
+// 
