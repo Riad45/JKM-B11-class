@@ -1,6 +1,8 @@
 import reactLogo from "./assets/react.svg";
 
 import Welcome from "./38-recap";
+import BuyFood from "./buyFood";
+import ToDo from "./ToDo";
 
 import "./App.css";
 
@@ -19,6 +21,19 @@ function App() {
       <Devoloper name="Salam" tech ="Python" />
 
       <Person></Person>
+
+      <Student name="Riad" id="911" cgpa="3.72"></Student>
+      <Student name="Prokash" id="911" cgpa="3.92"></Student>
+      <Student name="Hasan" id="911" cgpa="3.67"></Student>
+
+      <BuyFood foodName="Burger" price={150}></BuyFood>
+      <BuyFood foodName="Pizza" price={350}></BuyFood>
+      <BuyFood foodName="Fuchka" price={60}></BuyFood>
+
+      <ToDo task="Shower" isDone={true} time={20}></ToDo>
+      <ToDo task="Dinner" isDone={false} ></ToDo>
+      <ToDo task="Web Course" isDone={true} time={120}></ToDo>
+  
     </>
   );
 }
@@ -61,6 +76,19 @@ function Person() {
     </div>
   );
 }
+ function Student ({name,id,cgpa}){
 
+  return(
+    <div className="devStyle">
+
+      <h3>Student Details: </h3>
+      <p>Student Name: {name}</p>
+      <p>Student ID: {id}</p>
+      <p>CGPA: {cgpa}</p>
+
+
+    </div>
+  )
+ }
 
 
