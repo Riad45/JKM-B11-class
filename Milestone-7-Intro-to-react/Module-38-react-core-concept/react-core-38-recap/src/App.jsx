@@ -1,12 +1,21 @@
 import reactLogo from "./assets/react.svg";
 
+
 import Welcome from "./38-recap";
 import BuyFood from "./buyFood";
 import ToDo from "./ToDo";
+import User from "./user";
 
 import "./App.css";
 
 function App() {
+  const users = [
+    { id: 1, userName: "Rabab", device: "Xiaomi" },
+    { id: 2, userName: "Mim", device: "Hp laptop" },
+    { id: 3, userName: "Mira", device: "iphone 16" },
+    { id: 4, userName: "Tania", device: "Vivo" },
+  ];
+
   return (
     <>
       <div>
@@ -18,7 +27,7 @@ function App() {
       <Welcome />
 
       <Devoloper name="Rofiq" tech="Java" />
-      <Devoloper name="Salam" tech ="Python" />
+      <Devoloper name="Salam" tech="Python" />
 
       <Person></Person>
 
@@ -31,9 +40,16 @@ function App() {
       <BuyFood foodName="Fuchka" price={60}></BuyFood>
 
       <ToDo task="Shower" isDone={true} time={20}></ToDo>
-      <ToDo task="Dinner" isDone={false} ></ToDo>
+      <ToDo task="Dinner" isDone={false}></ToDo>
       <ToDo task="Web Course" isDone={true} time={120}></ToDo>
-  
+
+      {/* rendering list of user  */
+      
+      // users.map(user=> <User key={user.id} user={user} />)
+
+      users.map(user=> <User key={user.id} userName={user.userName} device={user.device} />)
+      
+      }
     </>
   );
 }
@@ -41,8 +57,6 @@ function App() {
 export default App;
 
 function Devoloper(props) {
-
-
   return (
     <>
       <div className="devStyle">
@@ -65,30 +79,27 @@ function Person() {
     marginBottom: "10px",
   };
   return (
-
     <div style={personStyle}>
-      <p >Hi my name is : {personName}</p>
+      <p>Hi my name is : {personName}</p>
 
-      <p style={{
-        color: 'red',
-        fontSize: '30px'
-      }}>hey there </p>
+      <p
+        style={{
+          color: "red",
+          fontSize: "30px",
+        }}
+      >
+        hey there{" "}
+      </p>
     </div>
   );
 }
- function Student ({name,id,cgpa}){
-
-  return(
+function Student({ name, id, cgpa }) {
+  return (
     <div className="devStyle">
-
       <h3>Student Details: </h3>
       <p>Student Name: {name}</p>
       <p>Student ID: {id}</p>
       <p>CGPA: {cgpa}</p>
-
-
     </div>
-  )
- }
-
-
+  );
+}
