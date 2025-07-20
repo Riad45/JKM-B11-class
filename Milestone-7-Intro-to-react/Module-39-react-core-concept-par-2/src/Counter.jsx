@@ -12,11 +12,16 @@ export default function Counter (){
 
     const [count, setCount] = useState(0);
 
-    const handleCount = ()=>{
-        
-        setCount(count+1);
-    }
+const handleLike = ()=>{
+    const newCount= count+1;
+    setCount(newCount);
+}
 
+const handleunlike=()=>{
+
+    const newCount =count-1;
+    setCount(newCount);
+}
 
 
     return(
@@ -27,7 +32,8 @@ export default function Counter (){
 
         <p> Total Like : {count} </p>
 
-        <button  onClick={handleCount}>Like</button>
+        <button  onClick={handleLike}>Like</button>
+        <button onClick={handleunlike}>Unlike</button>
 
         </div>
 
