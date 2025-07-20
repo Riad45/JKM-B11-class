@@ -1,6 +1,9 @@
 
 import './App.css'
 import Counter from './Counter';
+import Bowler from './bowler';
+
+
 function App() {
 
   const handleBtn1 = ()=>{
@@ -37,6 +40,8 @@ function App() {
       <button onClick={handleBtn3}>Button 3</button> <br /><br />
 
       <button onClick={()=>multiply3(5)}>pass value btn</button>
+
+      <Bowler></Bowler>
 
    
     </>
