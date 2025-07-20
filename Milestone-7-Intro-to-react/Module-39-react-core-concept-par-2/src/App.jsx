@@ -11,6 +11,14 @@ function App() {
     alert(`the sum after adding 5 is: ${num+5}` );
   }
 
+  const handleBtn3 = ()=>{
+    alert("this is btn 2");
+  }
+
+  const multiply3 = (num)=>{
+    alert(`after multiplying with 3 the result is ${num*3}`);
+  }
+
 
   return (
     <>
@@ -25,6 +33,10 @@ function App() {
       <button onClick={()=>add5(4)}>btn2</button>
 
       <Counter></Counter>
+
+      <button onClick={handleBtn3}>Button 3</button> <br /><br />
+
+      <button onClick={()=>multiply3(5)}>pass value btn</button>
 
    
     </>
