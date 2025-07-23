@@ -3,6 +3,11 @@ import './App.css'
 import Counter from './Counter';
 import Bowler from './bowler';
 
+import Users from './User';
+import Comments from './comments';
+import { Suspense } from 'react';
+
+
 
 function App() {
 
@@ -20,6 +25,18 @@ function App() {
 
   const multiply3 = (num)=>{
     alert(`after multiplying with 3 the result is ${num*3}`);
+  }
+
+
+  const userData = fetch("https://jsonplaceholder.typicode.com/users")
+  .then(res=> res.json());
+
+
+  const comments = async()=>{
+
+    const response = await fetch("https://jsonplaceholder.typicode.com/comments");
+    return response.json();
+
   }
 
 
@@ -42,6 +59,14 @@ function App() {
       <button onClick={()=>multiply3(5)}>pass value btn</button>
 
       <Bowler></Bowler>
+
+      <Suspense fallback= {<h3>User ureee Uree Aseeeeeeeeeeeeeeeeee</h3>}>
+        <Users userData={userData} ></Users>
+      </Suspense>
+
+      <Suspense fallback= {<h3>Ektu Daraw.......</h3>}>
+        <Comments comments= {comments()}> </Comments>
+      </Suspense>
 
    
     </>
