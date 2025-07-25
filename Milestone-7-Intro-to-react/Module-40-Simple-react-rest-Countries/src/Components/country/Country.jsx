@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import './country.css'
 
-const Country = ({country}) => {
+const Country = ({country , handleVisitedCountries}) => {
 
     const [visited, setVisited] = useState(false);
 
     const handleVisit = ()=>{
 
         setVisited(!visited);
+        handleVisitedCountries(country);
     }
     return (
         <div className={`country ${visited && 'card-background'}`}>
