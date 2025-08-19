@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/blog';
 
-const Blogs = () => {
+const Blogs = ({handleMarkAsRead}) => {
 
     const [blogs ,setBlogs] = useState([]);
 
@@ -23,7 +23,7 @@ console.log(blogs);
 
          <div className='grid gap-5'>
                {
-                blogs.map(blog=><Blog blog={blog}></Blog>)
+                blogs.map(blog=><Blog handleMarkAsRead={handleMarkAsRead} blog={blog}></Blog>)
             }
          </div>
             

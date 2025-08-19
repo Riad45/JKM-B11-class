@@ -1,7 +1,7 @@
 import React from "react";
 import { MdBookmarkAdd } from "react-icons/md";
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog , handleMarkAsRead }) => {
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-sm">
@@ -26,7 +26,7 @@ const Blog = ({ blog }) => {
           <h2 className="card-title text-2xl font-bold"> {blog.title}</h2>
           <p>Click the button to listen on Spotiwhy app.</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Mark as read</button>
+            <button onClick={()=>handleMarkAsRead(blog.reading_time)} className="btn btn-primary">Mark as read</button>
           </div>
         </div>
       </div>
