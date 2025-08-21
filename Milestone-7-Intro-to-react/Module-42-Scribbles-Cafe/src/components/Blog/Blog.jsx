@@ -1,7 +1,7 @@
 import React from "react";
 import { MdBookmarkAdd } from "react-icons/md";
 
-const Blog = ({ blog , handleMarkAsRead }) => {
+const Blog = ({ blog , handleMarkAsRead,handleBookmark }) => {
   return (
     <div>
       <div className="card lg:card-side bg-base-100 shadow-sm">
@@ -20,7 +20,7 @@ const Blog = ({ blog , handleMarkAsRead }) => {
               <h3 className="author-name text-lg font-bold ">{blog.author}</h3>
             </div>
 
-            <button className="bookmark"><MdBookmarkAdd size={35} /></button>
+            <button className="bookmark" onClick={()=>handleBookmark(blog.title)}><MdBookmarkAdd size={35} /></button>
           </div>
 
           <h2 className="card-title text-2xl font-bold"> {blog.title}</h2>
