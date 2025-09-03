@@ -22,12 +22,15 @@ function App() {
   const handleMarkAsRead = (articleReadingTime, id) => {
     // setReadingTime(readingTime+ articleReadingTime);
     // we can also do using callback updater
+
+    handleRemoveBookMark(id);
   if (!readIds.includes(id)) {
     // ✅ only add if blog not already read
     setReadingTime((previousTime) => previousTime + articleReadingTime);
     setReadIds([...readIds, id]); // mark this blog as read
-    handleRemoveBookMark(id);
+    
   }
+
   };
 
   const handleRemoveBookMark = (id) => {
