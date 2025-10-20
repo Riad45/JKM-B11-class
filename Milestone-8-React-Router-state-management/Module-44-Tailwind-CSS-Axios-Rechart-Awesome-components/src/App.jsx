@@ -4,6 +4,7 @@ import './App.css'
 import NavBar from './Component/NavBar/NavBar'
 import CustomNav from './CustomNav/CustomNav'
 import CustomPricing from './Component/CustomPricing/CustomPricing'
+import MyChart from './Component/ReCharts/MyChart'
 
 
   const pricingPromise = fetch('pricingOptionsData.json')
@@ -26,6 +27,8 @@ function App() {
  <CustomPricing pricingPromise={pricingPromise} > </CustomPricing>
 
  </Suspense>
+
+ <MyChart></MyChart>
 
    </main>
 
