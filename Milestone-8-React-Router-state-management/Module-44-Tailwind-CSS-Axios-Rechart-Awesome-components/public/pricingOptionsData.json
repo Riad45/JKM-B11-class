@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "name": "Basic Plan",
+    "price": 19.99,
+    "duration": "per month",
+    "description": "Perfect for beginners who want to get started with fitness and enjoy essential gym access.",
+    "features": [
+      "Access to gym floor",
+      "Locker and shower facilities",
+      "1 free fitness assessment"
+    ],
+    "highlight": false
+  },
+  {
+    "id": 2,
+    "name": "Pro Plan",
+    "price": 39.99,
+    "duration": "per month",
+    "description": "Ideal for regular gym-goers who want unlimited access, group workouts, and extra perks.",
+    "features": [
+      "24/7 gym access",
+      "Unlimited group classes",
+      "Sauna & steam room",
+      "2 guest passes per month"
+    ],
+    "highlight": true
+  },
+  {
+    "id": 3,
+    "name": "Elite Plan",
+    "price": 59.99,
+    "duration": "per month",
+    "description": "Designed for serious athletes who want personalized coaching and premium benefits.",
+    "features": [
+      "All Pro features",
+      "Personal trainer (2 sessions/month)",
+      "Custom diet plan",
+      "Free supplements starter pack"
+    ],
+    "highlight": false
+  }
+]

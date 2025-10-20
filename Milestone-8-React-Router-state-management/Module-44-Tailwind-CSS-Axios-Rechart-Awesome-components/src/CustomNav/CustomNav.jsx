@@ -41,7 +41,7 @@ const CustomNav = () => {
   return (
     <nav className="flex justify-between p-6 ">
 
-      <ul className={`md:hidden absolute bg-amber-100 text-black 
+      <ul className={ ` md:hidden absolute bg-amber-100 text-black 
         ${open? 'top-20 left-10': 'top-20 -left-70'}  duration-1000 `}>{links}</ul>
 
       <div className="flex justify-center items-center gap-5 ">

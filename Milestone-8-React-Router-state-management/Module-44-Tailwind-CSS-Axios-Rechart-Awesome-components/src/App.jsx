@@ -1,20 +1,42 @@
 
+import { Suspense } from 'react'
 import './App.css'
 import NavBar from './Component/NavBar/NavBar'
 import CustomNav from './CustomNav/CustomNav'
+import CustomPricing from './Component/CustomPricing/CustomPricing'
+
+
+  const pricingPromise = fetch('pricingOptionsData.json')
+  .then(res=>res.json())
 
 function App() {
   
 
+
   return (
     <>
 
-    <CustomNav></CustomNav>
+   <header>
+     <CustomNav></CustomNav>
+   </header>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis vitae eligendi quo minus beatae officiis sint consequuntur laudantium iusto obcaecati.</p>
+   <main>
+ <Suspense fallback={<span className="loading loading-ring loading-xl"></span>}>
+
+ <CustomPricing pricingPromise={pricingPromise} > </CustomPricing>
+
+ </Suspense>
+
+   </main>
+
+   <footer>
+
+   </footer>
+
+    
 
     </>
   )
 }
 
-export default App
+export default App;
