@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Lia500Px } from "react-icons/lia";
-import Link from "./Link";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdCancel } from "react-icons/md";
 import { Outlet } from "react-router";
+import CustomNavLink from "./CustomNavLink";
 
 const navData = [
   {
@@ -36,7 +35,7 @@ const navData = [
 const CustomNav = () => {
   const [open, setOpen] = useState(false);
   const links = navData.map((route) => (
-    <Link route={route} key={route.id}></Link>
+   <CustomNavLink key={route.id} route={route}></CustomNavLink>
   ));
 
   return (
