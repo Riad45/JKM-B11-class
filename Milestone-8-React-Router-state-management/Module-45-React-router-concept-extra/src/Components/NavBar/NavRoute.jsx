@@ -6,9 +6,12 @@ const NavRoute = ({ route }) => {
     <ul>
       <li className="px-6 py-1 hover:bg-amber-500">
         <button>
-          {/* <Link to={route.url}> {route.title}</Link> */}
           <NavLink
-            className={({ isActive }) => isActive && "text-amber-500 hover:text-white"}
+            className={({ isActive }) => 
+              isActive 
+                ? "text-amber-500 hover:text-white" 
+                : "" 
+            }
             to={route.url}
           >
             {route.title}
