@@ -26,9 +26,14 @@ const navData = [
   },
   {
     id: 5,
-    title: "Contact",
-    url: "/contact",
+    title: "Users",
+    url: "/users",
   },
+  {
+    id: 6,
+    title: "Users2",
+    url: "/users2",
+  }
 ];
 
 const Nav = () => {

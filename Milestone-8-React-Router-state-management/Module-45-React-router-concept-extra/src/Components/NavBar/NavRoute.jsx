@@ -8,7 +8,7 @@ const NavRoute = ({ route }) => {
         <button>
           {/* <Link to={route.url}> {route.title}</Link> */}
           <NavLink
-            className={({ isActive }) => isActive && "text-amber-500"}
+            className={({ isActive }) => isActive && "text-amber-500 hover:text-white"}
             to={route.url}
           >
             {route.title}
