@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import useInputField from "../../Hooks/useInputField";
 
 const ControlledField = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [emailValue , handleEmailOnChange] = useInputField("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
+
+    console.log(emailValue, password);
   };
 
   const handleOnChange = (e) => {
@@ -24,7 +27,7 @@ const ControlledField = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <input type="email" name="email"  placeholder="email" required />
+        <input type="email" name="email"  placeholder="email" defaultValue={emailValue} onChange={handleEmailOnChange} required />
         <br />
         <input
           type="password"
